@@ -1,41 +1,44 @@
 import pandas as pd
+import os
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 import joblib
 import requests
-from openai import OpenAI
+from groq import Groq
 from config import api_key
 
-client = OpenAI(api_key=api_key)
+client = Groq(
+    api_key=os.environ.get("api_key"),
+)
 
-def create_embedding(text_list):
-    r=requests.post("http://localhost:11434/api/embed",json={
-        "model":"bge-m3",
-        "input":text_list
-    })
-    embedding = r.json()['embeddings']
-    return embedding
+# def create_embedding(text_list):
+#     r=requests.post("http://localhost:11434/api/embed",json={
+#         "model":"bge-m3",
+#         "input":text_list
+#     })
+#     embedding = r.json()['embeddings']
+#     return embedding
 
-def inference(promt):
-    print("thinking")
-    r=requests.post("http://localhost:11434/api/generate",json={
-        "model":"llama3.2",
-        "prompt": prompt,
-        "stream":False
-    })
-    response = r.json()
-    print(response)
-    return response
+# def inference(promt):
+#     print("thinking")
+#     r=requests.post("http://localhost:11434/api/generate",json={
+#         "model":"llama3.2",
+#         "prompt": prompt,
+#         "stream":False
+#     })
+#     response = r.json()
+#     print(response)
+#     return response
 
-#when api is avalaible
-# def inference_openai(prompt):
-    # print("thinking...")
-#     response = client.responses.create(
-#     model="gpt-5",
-#     input=prompt
-#     )
+# when api is avalaible
+def inference_groq(prompt):
+    print("thinking...")
+    response = client.responses.create(
+    model="llama-3.1-8b-instant",
+    input=prompt
+    )
 
-#     return response.output_text
+    return response.output_text
 
   
 df = joblib.load('embedding.joblib')
