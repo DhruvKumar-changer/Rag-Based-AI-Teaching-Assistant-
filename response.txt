@@ -1,0 +1,9 @@
+In this course, we've covered web development topics extensively, but Core Web Vitals are a bit of a special case.
+
+Core Web Vitals is actually not part of the standard curriculum for our Sigma web development course. I think there might be some confusion - in your course, we were supposed to cover SEO and Core Web Vitals specifically in HTML, and that's where this topic comes up.
+
+To answer your question directly, "where is web vitals in this course", you can find the content related to Core Web Vitals in video number 6 of our Sigma web development series. In that video, at start time 0 seconds, we introduce Core Web Vitals and their importance. There's also a relevant section later on where we explain how these three core web vitals work and get their value.
+
+I can guide you to the exact part of video number 6 by saying, head over to video number 6, and start watching from timestamp 0 seconds for an overview of Core Web Vitals. Then move forward to around 5 seconds into that same video for more details on why these vitals are important. Finally, jump straight to the timestamps where we dive deeper (around 234-237 seconds) on how exactly these three core web vitals work.
+
+If you have any questions about other topics in this course, please feel free to ask!
