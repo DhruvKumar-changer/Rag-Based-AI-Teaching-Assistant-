@@ -4,7 +4,7 @@
 Move all your videos files to the videos folder.
 
 ## Step 2 - Convert to mp3
-Convert all the vvideos files to mp3 by running video_to_mp3
+Convert all the videos files to mp3 by running video_to_mp3
 
 ## Step 3 - Convert mp3 to json
 Convert all the mp3 files to json by running mp3_to_json
